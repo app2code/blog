@@ -1,5 +1,6 @@
 pipeline {
    agent {label "linux-ubuntu"}
+   tools {nodejs "nodejs"}
   stages {
     stage('build') {
       steps {
