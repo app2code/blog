@@ -15,7 +15,7 @@ pipeline {
         sh '''
           cat /etc/os-release
           ls
-         sudo apt-get update
+
           php --version
           composer --version
            '''
