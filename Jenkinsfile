@@ -5,6 +5,12 @@ pipeline {
       steps {
            echo "build ..."
         sh 'cat /etc/os-release'
+        sh 'mv .env.testing .env'
+        sh 'composer install -n --ignore-platform-reqs'
+        sh 'npm install'
+        sh 'npm run production'
+        sh 'php artisan key:generate'
+        sh 'php artisan migrate'
       }
     }
 
@@ -19,6 +25,8 @@ pipeline {
           php --version
           composer --version
            '''
+
+         sh 'vendor/bin/phpunit'
       }
     }
 
