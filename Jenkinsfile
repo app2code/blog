@@ -8,10 +8,11 @@ pipeline {
        // sh 'sudo npm i -g npm'
         sh 'mv .env.example .env'
         sh 'composer install -n --ignore-platform-reqs'
-         sh 'npm install'
-        sh 'npm run production'
-        sh 'php artisan key:generate'
-        sh 'php artisan migrate'
+        sh 'node -v'
+       //  sh 'npm install'
+       // sh 'npm run production'
+       // sh 'php artisan key:generate'
+       // sh 'php artisan migrate'
       }
     }
 
