@@ -11,7 +11,7 @@ pipeline {
         sh 'node -v'
        //  sh 'npm install'
        // sh 'npm run production'
-       // sh 'php artisan key:generate'
+        sh 'php artisan key:generate'
        // sh 'php artisan migrate'
       }
     }
