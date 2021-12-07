@@ -5,7 +5,7 @@ pipeline {
       steps {
            echo "build ..."
         sh 'cat /etc/os-release'
-        sh 'mv .env.testing .env'
+        sh 'mv .env.example .env'
         sh 'composer install -n --ignore-platform-reqs'
         sh 'npm install'
         sh 'npm run production'
