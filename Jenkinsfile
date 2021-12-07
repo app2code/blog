@@ -1,5 +1,5 @@
 pipeline {
-   agent any
+   agent {label "linux-ubuntu"}
   stages {
     stage('build') {
       steps {
@@ -15,7 +15,7 @@ pipeline {
         sh '''
           cat /etc/os-release
           ls
-          apt-get update
+         sudo apt-get update
           php --version
           composer --version
            '''
