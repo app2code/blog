@@ -13,7 +13,7 @@ pipeline {
        sh 'npm install'
        sh 'npm run production'
         sh 'php artisan key:generate'
-       // sh 'php artisan migrate'
+         sh 'php artisan migrate'
       }
     }
 
