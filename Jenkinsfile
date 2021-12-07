@@ -24,8 +24,10 @@ pipeline {
 
    stage('deploy') {
       steps {
-           echo "testing ..."
+          timestamps {
+           echo "deploy ..."
         sh 'cat /etc/os-release'
+          }
       }
     }
 
